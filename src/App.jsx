@@ -1,5 +1,20 @@
+import Card from "./components/card";
+import "./components/index.css";
+
+const appStyle = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    // marginTop: "10rem",
+    height: "100vh",
+};
+
 function App() {
-  return <h1>Hello world</h1>;
+    return (
+        <div style={appStyle}>
+            <Card />
+        </div>
+    );
 }
 
 export default App;
