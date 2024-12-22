@@ -1,18 +1,22 @@
 import Card from "./components/card";
-import "./components/index.css";
+import "./index.css";
+import TextExpander from "./components/TextExpander";
 
 const appStyle = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     // marginTop: "10rem",
-    height: "100vh",
+    padding: "4rem 0",
+    flexDirection: "column",
+    gap: "4rem",
 };
 
 function App() {
     return (
         <div style={appStyle}>
             <Card />
+            <TextExpander />
         </div>
     );
 }
