@@ -1,6 +1,7 @@
 import Card from "./components/card";
 import "./index.css";
 import TextExpander from "./components/TextExpander";
+import DateCounter from "./components/DateCounter";
 
 const appStyle = {
     display: "flex",
@@ -17,6 +18,7 @@ function App() {
         <div style={appStyle}>
             <Card />
             <TextExpander />
+            <DateCounter />
         </div>
     );
 }
