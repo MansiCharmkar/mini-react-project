@@ -1,22 +1,17 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const textStyle = {
     maxWidth: "40rem",
 };
-const btnContainer = {
-    paddingTop: "1rem",
-    display: "flex",
-    justifyContent: "space-between",
-};
+
 const btnStyle = {
-    padding: "0.5rem 1rem",
     border: "none",
-    backgroundColor: "#ae3ec9",
-    borderRadius: "1rem",
-    color: "white",
+    backgroundColor: "transparent",
+    marginLeft: "0.5rem",
+    color: "blue",
     cursor: "pointer",
 };
-const rawText = ` Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+const rawText = `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
                 officia iure voluptatibus velit debitis dignissimos id, sunt ab,
                 dolorum quia suscipit consequatur labore facilis minima
                 blanditiis aspernatur beatae minus molestias. Ex deserunt nemo
@@ -39,18 +34,17 @@ const rawText = ` Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolo
 
 const TextExpander = () => {
     const [show, setShow] = useState(false);
-    const text = show ? rawText : rawText.slice(0, 150);
+    const text = show ? rawText : rawText.slice(0, 200);
     function handleClick() {
         setShow((show) => !show);
     }
     return (
-        <div>
-            <p style={textStyle}>{text}</p>
-            <div style={btnContainer}>
-                <button onClick={handleClick} style={btnStyle}>
-                    {show ? `Show Less` : `Show More`}
-                </button>
-            </div>
+        <div style={textStyle}>
+            <span>{text}</span>
+
+            <button onClick={handleClick} style={btnStyle}>
+                {show ? `show less` : `...show more`}
+            </button>
         </div>
     );
 };
