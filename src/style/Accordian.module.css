@@ -30,9 +30,9 @@
     display: none;
 }
 
-/* .display {
+.display {
     display: block;
-} */
+}
 
 .row h3 {
     cursor: pointer;

@@ -4,6 +4,8 @@ import TextExpander from "./components/TextExpander";
 import DateCounter from "./components/DateCounter";
 import StarRating from "./components/StarRating";
 import Accordian from "./components/Accordian";
+import AccordionV2 from "./components/AccordionV2";
+import AccordionV3 from "./components/AccordionV3";
 
 const appStyle = {
     display: "flex",
@@ -49,6 +51,8 @@ function App() {
                 <StarRating color="#fab005" defaultRating={5} size={15} />
             </div>
             <Accordian content={accordionContents} color="#2f9e44" />
+            <AccordionV2 content={accordionContents} color="#2f9e44" />
+            <AccordionV3 content={accordionContents} color="#2f9e44" />
         </div>
     );
 }
